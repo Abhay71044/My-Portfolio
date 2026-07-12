@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: To-Do List Application - clean browser-based task management tool built by Abhay Singh.">
+    <title>Case Study: To-Do List Application | Abhay Singh</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         PAGE LOADER
+         ========================================== -->
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-logo">AS</div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         CUSTOM CURSOR
+         ========================================== -->
+    <div id="custom-cursor"></div>
+    <div id="custom-cursor-dot"></div>
+
+    <!-- ==========================================
+         BACKGROUND MESH GLOWS
+         ========================================== -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div id="spotlight"></div>
+
+    <!-- ==========================================
+         PREMIUM FLOATING NAVBAR
+         ========================================== -->
+    <nav class="navbar">
+        <a href="../index.html" class="nav-logo">AS</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../skills.html">Skills</a></li>
+            <li><a href="../experience.html">Experience</a></li>
+            <li><a href="../projects.html" class="active">Projects</a></li>
+            <li><a href="../achievements.html">Achievements</a></li>
+            <li><a href="../certifications.html">Certificates</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../assets/resume/Abhay_Singh_Resume.jpeg" target="_blank" class="btn-nav-resume-mobile" style="display:none;">Resume</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="btn-theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+            <a href="../assets/resume/Abhay_Singh_Resume.jpeg" target="_blank" class="btn-nav-resume">Resume</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         MAIN LAYOUT
+         ========================================== -->
+    <main>
+        
+        <!-- CASE STUDY HERO -->
+        <section class="case-study-hero reveal active">
+            <p class="hero-tag">Utility Case Study</p>
+            <h1>To-Do List Application</h1>
+            
+            <div class="case-study-meta">
+                <div class="case-study-meta-item">
+                    <h5>Role</h5>
+                    <p>Frontend Developer / Designer</p>
+                </div>
+                <div class="case-study-meta-item">
+                    <h5>Timeline</h5>
+                    <p>1 Week</p>
+                </div>
+                <div class="case-study-meta-item">
+                    <h5>Category</h5>
+                    <p>Productivity Tool</p>
+                </div>
+                <div class="case-study-meta-item">
+                    <h5>Tech Stack</h5>
+                    <p>HTML5, CSS3, JavaScript</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER IMAGE -->
+        <section style="padding-top: 0; padding-bottom: 20px;">
+            <div class="case-study-image reveal">
+                <img src="../assets/projects/todo-app.png" alt="To Do Application Layout Preview">
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT BLOCK -->
+        <section style="padding-top: 20px;">
+            <div class="case-study-grid">
+                
+                <!-- Detailed Case Study Body -->
+                <div class="case-study-content reveal">
+                    
+                    <div class="case-study-section">
+                        <h3>Overview</h3>
+                        <p>
+                            The To-Do List Application is a clean, browser-based task manager designed to help individuals log and track daily task items. Utilizing localized browser caching structures, users can safely reload pages without losing active items lists.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Problem Statement</h3>
+                        <p>
+                            Many task lists suffer from unnecessary complexity, demanding account logins and forcing network sync loops. Users often just want a lightweight, direct pad that loads instantly, functions offline, and operates silently inside any open browser window.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>The Solution</h3>
+                        <p>
+                            We built a highly optimized single-page utility using pure DOM operations. The application stores task entries locally, provides toggling states, handles deletion, and sorts elements dynamically using basic array manipulation scripts.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Core Features</h3>
+                        <ul>
+                            <li><strong>Local Caching:</strong> Persists tasks using HTML5 LocalStorage configurations.</li>
+                            <li><strong>Filter Categories:</strong> Inspect task collections by sorting options (All, Active, Completed).</li>
+                            <li><strong>Dynamic Counters:</strong> Live status indicators show the remaining workload.</li>
+                            <li><strong>Responsive Sizing:</strong> Designed to display cleanly in desktop columns or narrow smartphone viewports.</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Development Process</h3>
+                        <p>
+                            The interface was structured using semantic HTML tags. CSS styling was integrated next to define a cohesive color scheme. Finally, JavaScript logic was written to manage state arrays, map inputs, and sync operations with localStorage.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Challenges &amp; Obstacles</h3>
+                        <p>
+                            Managing active index counts during task deletion was initially a bug source. We resolved this by mapping unique IDs to each array item and using state filtering functions rather than simple index lookups.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Lessons Learned</h3>
+                        <p>
+                            This project provided a deep dive into DOM events, forms validation, and client-side storage boundaries. It highlighted how simple array filter algorithms can replace complex databases for local-only utilities.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Future Improvements</h3>
+                        <ul>
+                            <li>Add category sub-folders (Work, Personal, Studies).</li>
+                            <li>Integrate dynamic priority indicators and alerts.</li>
+                            <li>Support voice text conversions for quick entries.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Sidebar Details -->
+                <div class="case-study-sidebar reveal">
+                    <div class="case-sidebar-block glass-card gradient-border-card">
+                        <h4>Live Links</h4>
+                        <div class="case-sidebar-links">
+                            <a href="https://to-do-app-site-ksam.onrender.com" target="_blank" class="btn-primary">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/Abhay71044" target="_blank" class="btn-secondary">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="case-sidebar-block glass-card gradient-border-card">
+                        <h4>Tech Details</h4>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <div>
+                                <h5 style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Frontend</h5>
+                                <p style="font-weight: 600;">HTML5, CSS3, JavaScript</p>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Storage</h5>
+                                <p style="font-weight: 600;">LocalStorage API</p>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Hosting</h5>
+                                <p style="font-weight: 600;">Render Hosting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- PREVIOUS & NEXT PAGINATION -->
+        <section style="padding-top: 0;">
+            <div class="case-study-nav">
+                <a href="sih-dashboard.html" class="case-nav-btn">
+                    <span>&#10094; Previous Project</span>
+                    <h4>SIH Dashboard</h4>
+                </a>
+                
+                <a href="../projects.html" class="btn-secondary btn-back-projects"><i class="fas fa-th"></i> Back to Projects</a>
+                
+                <a href="tic-tac-toe.html" class="case-nav-btn case-nav-next">
+                    <span>Next Project &#10095;</span>
+                    <h4>Tic Tac Toe Game</h4>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <div class="footer-logo">AS</div>
+        <p class="footer-desc">Full Stack Developer • AI Student • Problem Solver</p>
+        <p class="footer-disclaimer">
+            I hereby declare that all information, certifications, achievements, projects, and professional credentials displayed on this portfolio are true, accurate, and verifiable.
+        </p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

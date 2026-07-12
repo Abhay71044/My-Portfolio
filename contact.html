@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Abhay Singh - availability status, styled contact form, email address, maps location, and links.">
+    <title>Contact | Abhay Singh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         PAGE LOADER
+         ========================================== -->
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-logo">AS</div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         CUSTOM CURSOR
+         ========================================== -->
+    <div id="custom-cursor"></div>
+    <div id="custom-cursor-dot"></div>
+
+    <!-- ==========================================
+         BACKGROUND MESH GLOWS
+         ========================================== -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div id="spotlight"></div>
+
+    <!-- ==========================================
+         PREMIUM FLOATING NAVBAR
+         ========================================== -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">AS</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="certifications.html">Certificates</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="assets/resume/Abhay_Singh_Resume.jpeg" target="_blank" class="btn-nav-resume-mobile" style="display:none;">Resume</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="btn-theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+            <a href="assets/resume/Abhay_Singh_Resume.jpeg" target="_blank" class="btn-nav-resume">Resume</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         MAIN LAYOUT
+         ========================================== -->
+    <main>
+        
+        <!-- CONTACT HEADER -->
+        <section style="padding-top: 180px; padding-bottom: 20px;">
+            <div class="section-header" style="margin-bottom: 30px;">
+                <p>Get in Touch</p>
+                <h1>Let's Build Something Great</h1>
+            </div>
+            <p style="color: var(--text-secondary); max-width: 700px; font-size: 1.1rem; line-height: 1.7;">
+                If you have an internship opening, freelance proposal, coding query, or simply want to speak about technologies, drop a message below!
+            </p>
+        </section>
+
+        <!-- CONTACT INTERFACE -->
+        <section class="reveal active" style="padding-top: 20px; margin-bottom: 80px;">
+            <div class="contact-grid">
+                
+                <!-- Info Panel (Left) -->
+                <div class="contact-info-panel reveal">
+                    <div class="contact-status-badge">
+                        <span></span> Available for Internships &amp; Roles
+                    </div>
+                    <h3>Contact Information</h3>
+                    <p class="contact-info-desc">
+                        I am currently located in Greater Noida, Uttar Pradesh, India. I am open to both local in-office roles and remote collaborations. Let's schedule a conversation!
+                    </p>
+                    
+                    <div class="contact-info-item glass-card gradient-border-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>abhaysingh71044@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item glass-card gradient-border-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Greater Noida, Uttar Pradesh, India</p>
+                        </div>
+                    </div>
+                    <!-- Styled Google Map Section Removed -->
+                </div>
+
+                <!-- Form Panel (Right) -->
+                <div class="contact-form-panel glass-card gradient-border-card reveal">
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="1d60386d-6dd6-487e-92ea-47b856f7799f">
+                        <!-- Optional Config -->
+                        <input type="hidden" name="subject" value="New Portfolio Contact Message">
+                        <input type="checkbox" name="botcheck" style="display:none;">
+
+                        <div class="contact-form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" placeholder="Abhay Singh" required>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="abhay123@gmail.com" required>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="user_subject" id="subject" placeholder="Project Discussion" required>
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="message">Message Details</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Hi Abhay, I'd like to work with you on..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                        <p id="success-msg"></p>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <div class="footer-logo">AS</div>
+        <p class="footer-desc">Full Stack Developer • AI Student • Problem Solver</p>
+        <div class="footer-socials">
+            <a href="https://github.com/Abhay71044" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://leetcode.com/u/Abhay_71044/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+            <a href="https://www.linkedin.com/in/abhay-singh-894044292" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/abhaychauhan71044" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="footer-disclaimer">
+            I hereby declare that all information, certifications, achievements, projects, and professional credentials displayed on this portfolio are true, accurate, and verifiable.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

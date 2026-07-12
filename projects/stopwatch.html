@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: Stopwatch Application - high-performance precision web timer built by Abhay Singh.">
+    <title>Case Study: Stopwatch Application | Abhay Singh</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         PAGE LOADER
+         ========================================== -->
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-logo">AS</div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         CUSTOM CURSOR
+         ========================================== -->
+    <div id="custom-cursor"></div>
+    <div id="custom-cursor-dot"></div>
+
+    <!-- ==========================================
+         BACKGROUND MESH GLOWS
+         ========================================== -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div id="spotlight"></div>
+
+    <!-- ==========================================
+         PREMIUM FLOATING NAVBAR
+         ========================================== -->
+    <nav class="navbar">
+        <a href="../index.html" class="nav-logo">AS</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../skills.html">Skills</a></li>
+            <li><a href="../experience.html">Experience</a></li>
+            <li><a href="../projects.html" class="active">Projects</a></li>
+            <li><a href="../achievements.html">Achievements</a></li>
+            <li><a href="../certifications.html">Certificates</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../assets/resume/Abhay_Singh_Resume.jpeg" target="_blank" class="btn-nav-resume-mobile" style="display:none;">Resume</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="btn-theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+            <a href="../assets/resume/Abhay_Singh_Resume.jpeg" target="_blank" class="btn-nav-resume">Resume</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         MAIN LAYOUT
+         ========================================== -->
+    <main>
+        
+        <!-- CASE STUDY HERO -->
+        <section class="case-study-hero reveal active">
+            <p class="hero-tag">System Case Study</p>
+            <h1>Stopwatch Application</h1>
+            
+            <div class="case-study-meta">
+                <div class="case-study-meta-item">
+                    <h5>Role</h5>
+                    <p>Frontend Engineer</p>
+                </div>
+                <div class="case-study-meta-item">
+                    <h5>Timeline</h5>
+                    <p>5 Days</p>
+                </div>
+                <div class="case-study-meta-item">
+                    <h5>Category</h5>
+                    <p>Web Application</p>
+                </div>
+                <div class="case-study-meta-item">
+                    <h5>Tech Stack</h5>
+                    <p>HTML5, CSS3, JavaScript</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER IMAGE -->
+        <section style="padding-top: 0; padding-bottom: 20px;">
+            <div class="case-study-image reveal">
+                <img src="../assets/projects/stopwatch.png" alt="Stopwatch Application Layout Preview">
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT BLOCK -->
+        <section style="padding-top: 20px;">
+            <div class="case-study-grid">
+                
+                <!-- Detailed Case Study Body -->
+                <div class="case-study-content reveal">
+                    
+                    <div class="case-study-section">
+                        <h3>Overview</h3>
+                        <p>
+                            A precise browser-based stopwatch application featuring millisecond tracking, lap log lists, and modern glassmorphic timer displays. Designed with efficiency in mind, the timer leverages standard window intervals to maintain log accuracy.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Problem Statement</h3>
+                        <p>
+                            Basic stopwatch interfaces are often visually basic and lack lap-logging capabilities. Furthermore, background tab throttles in modern browsers can disrupt intervals, causing logs to drift over time.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>The Solution</h3>
+                        <p>
+                            We built a highly responsive frontend display combined with state-tracking logic that records real timestamps using high-performance DOM updates. This design minimizes background drift and keeps the layout light and fast.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Core Features</h3>
+                        <ul>
+                            <li><strong>Millisecond Tracking:</strong> Displays minutes, seconds, and hundredths of a second.</li>
+                            <li><strong>Dynamic Lap Logging:</strong> Append lap times to a scrollable checklist without interrupting the timer.</li>
+                            <li><strong>State-Saving Controls:</strong> Toggles start, pause, and reset actions dynamically.</li>
+                            <li><strong>Responsive Glass Display:</strong> Clean layouts resize smoothly from desktop monitors to phones.</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Development Process</h3>
+                        <p>
+                            The interface structure utilizes absolute units to prevent shifting during speed calculations. JavaScript timers manage numerical math and format text strings. The DOM updates are optimized to run smoothly at 60fps.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Challenges &amp; Obstacles</h3>
+                        <p>
+                            Preventing page layout shifts as digits change size was a key challenge. We resolved this by using monospace numeric fonts and giving timer boxes absolute width allocations.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Lessons Learned</h3>
+                        <p>
+                            This project was a great lesson in high-frequency DOM manipulation. Minimizing recalculations by only updating changed digits is critical for smooth, browser-based timing tools.
+                        </p>
+                    </div>
+
+                    <div class="case-study-section">
+                        <h3>Future Improvements</h3>
+                        <ul>
+                            <li>Implement split times side-by-side with lap logs.</li>
+                            <li>Support offline data downloads in CSV or JSON format.</li>
+                            <li>Add keyboard hotkey bindings (e.g., Space to pause/start).</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Sidebar Details -->
+                <div class="case-study-sidebar reveal">
+                    <div class="case-sidebar-block glass-card gradient-border-card">
+                        <h4>Live Links</h4>
+                        <div class="case-sidebar-links">
+                            <a href="https://user-friendly-stopwatch-site.onrender.com" target="_blank" class="btn-primary">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/Abhay71044" target="_blank" class="btn-secondary">GitHub Repository <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="case-sidebar-block glass-card gradient-border-card">
+                        <h4>Tech Details</h4>
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <div>
+                                <h5 style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Frontend</h5>
+                                <p style="font-weight: 600;">HTML5, CSS3, JavaScript</p>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Timing Engine</h5>
+                                <p style="font-weight: 600;">High-frequency millisecond loop</p>
+                            </div>
+                            <div>
+                                <h5 style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase;">Hosting</h5>
+                                <p style="font-weight: 600;">Render Hosting</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- PREVIOUS & NEXT PAGINATION -->
+        <section style="padding-top: 0;">
+            <div class="case-study-nav">
+                <a href="tic-tac-toe.html" class="case-nav-btn">
+                    <span>&#10094; Previous Project</span>
+                    <h4>Tic Tac Toe Game</h4>
+                </a>
+                
+                <a href="../projects.html" class="btn-secondary btn-back-projects"><i class="fas fa-th"></i> Back to Projects</a>
+                
+                <a href="food-delivery.html" class="case-nav-btn case-nav-next">
+                    <span>Next Project &#10095;</span>
+                    <h4>Food Delivery Site</h4>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <div class="footer-logo">AS</div>
+        <p class="footer-desc">Full Stack Developer • AI Student • Problem Solver</p>
+        <p class="footer-disclaimer">
+            I hereby declare that all information, certifications, achievements, projects, and professional credentials displayed on this portfolio are true, accurate, and verifiable.
+        </p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
