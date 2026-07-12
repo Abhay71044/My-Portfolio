@@ -1,121 +1,324 @@
-# 🚀 Abhay Singh - Personal Portfolio
+# 🚀 Abhay Singh - Premium Portfolio Website
 
-Welcome to my personal portfolio website built to showcase my skills, projects, certifications, achievements, and coding journey.
+<p align="center">
 
-🌐 **Live Website:**  
+<img src="assets/profile.png" width="180" alt="Profile"/>
+
+</p>
+
+<p align="center">
+
+A modern, premium, fully responsive multi-page portfolio built using HTML5, CSS3 and JavaScript.
+
+Inspired by Apple, Vercel, Linear, Stripe and Framer design systems.
+
+</p>
+
+---
+
+## 🌐 Live Demo
+
+> Add your deployed website link here
+
+```
 https://abhaysingh-portfolio.vercel.app/
 
+```
+
 ---
 
-## 👨‍💻 About Me
+# ✨ Features
 
-I am a Computer Science (AI) student passionate about:
+- 🎨 Premium Glassmorphism UI
+- 🌙 Dark / Light Theme
+- 📱 Fully Responsive Design
+- ⚡ Smooth Animations
+- 🖱️ Custom Cursor
+- 💡 Interactive Spotlight Effect
+- 📜 Scroll Reveal Animations
+- 📊 Animated Statistics
+- 🏆 Dedicated Achievement Section
+- 💻 Project Showcase
+- 📄 Resume Download
+- 📬 Contact Form
+- 🖼️ Certificate Gallery
+- 🚀 Optimized Performance
+- ♿ Accessibility Friendly
 
-- Full Stack Development
+---
+
+# 📂 Website Pages
+
+## 🏠 Home
+
+- Hero Section
+- Animated Typing Effect
+- Statistics
+- Featured Skills
+- Social Links
+- Call To Action
+
+---
+
+## 👨‍💻 About
+
+- Personal Journey
+- Academic Background
+- Army Public School
+- GL Bajaj Institute of Technology & Management
+- CGPA
+- Core Strengths
+- Vision
+- Mission
+
+---
+
+## 💻 Skills
+
+- Programming Languages
+- Frontend Development
+- Backend Development
+- Databases
 - Artificial Intelligence
-- Data Structures & Algorithms
-- Cybersecurity
-- Problem Solving
-
-I enjoy building real-world applications, learning new technologies, and continuously improving my development skills.
+- Cloud Computing
+- Tools & Technologies
 
 ---
 
-## 🛠️ Tech Stack
+## 💼 Experience
+
+- SkillCraft Technology Internship
+- ShadowFox Internship
+- Professional Timeline
+- Responsibilities
+- Technologies Used
+
+---
+
+## 🚀 Projects
+
+Featured Projects
+
+- Food Delivery Website
+- InclusivePay
+- Smart India Hackathon Project
+- Stopwatch Application
+- Tic Tac Toe
+- To-Do List
+- Farming Dashboard
+- More...
+
+Each project includes
+
+- Description
+- Technologies
+- GitHub Link
+- Live Demo
+- Case Study
+
+---
+
+## 🏆 Achievements
+
+- Internship Achievements
+- Hackathons
+- Academic Milestones
+- Coding Achievements
+- Statistics
+
+---
+
+## 📜 Certifications
+
+- Internship Certificates
+- Recommendation Letter
+- Cybersecurity
+- Workshops
+- Technical Certifications
+
+Interactive Image Preview Included.
+
+---
+
+## 📬 Contact
+
+- Contact Form
+- Email
+- LinkedIn
+- GitHub
+- LeetCode
+- Location
+- Resume Download
+
+---
+
+# 🛠 Tech Stack
 
 ### Frontend
+
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (ES6)
 
-### Tools & Platforms
-- Git & GitHub
-- Vercel
-- Web3Forms
-- VS Code
+### UI Design
 
----
+- Glassmorphism
+- Responsive Design
+- CSS Grid
+- Flexbox
+- CSS Variables
 
-## ✨ Portfolio Features
+### Icons
 
-✔ Modern UI Design  
-✔ Fully Responsive Layout  
-✔ Interactive Navigation  
-✔ Project Showcase  
-✔ Skills Section  
-✔ Certifications Section  
-✔ Achievements Section  
-✔ Coding Profiles Integration  
-✔ Contact Form Integration  
-✔ Resume Download Option  
-✔ Mobile-Friendly Design  
+- Font Awesome
+
+### Fonts
+
+- Plus Jakarta Sans
+- Inter
 
 ---
 
-## 🚀 Featured Projects
+# 📁 Folder Structure
 
-### 🍕 Food Delivery Website
-A modern food ordering platform with responsive design and smooth user experience.
-
-### 🎮 Tic Tac Toe Game
-Interactive JavaScript-based game with clean UI.
-
-### ✅ To-Do List Application
-Task management application for organizing daily activities.
-
-### ⏱ Stopwatch Application
-Accurate stopwatch built using JavaScript.
-
-### 🇮🇳 Smart India Hackathon Project
-Innovation-focused project developed during hackathon participation.
+```
+Portfolio
+│
+├── assets
+│   ├── profile.png
+│   ├── certificates
+│   ├── projects
+│   ├── resume
+│   └── images
+│
+├── index.html
+├── about.html
+├── skills.html
+├── experience.html
+├── projects.html
+├── achievements.html
+├── certifications.html
+├── contact.html
+│
+├── style.css
+├── script.js
+│
+└── README.md
+```
 
 ---
 
-## 🏆 Certifications
+# 🚀 Getting Started
 
-- Oracle Cloud Infrastructure Foundations
-- Cloud Security Automation
-- Cloud Security Fundamentals
-- Cybersecurity Foundation
-- Network Security Fundamentals
-- Security Operations Fundamentals
+Clone the repository
+
+```bash
+git clone https://github.com/Abhay71044/portfolio-website.git
+```
+
+Go to the project
+
+```bash
+cd portfolio-website
+```
+
+Open
+
+```
+index.html
+```
+
+or use VS Code Live Server.
 
 ---
 
-## 📈 Coding Profiles
+# 📱 Responsive
+
+Designed for
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+Supports screen sizes from **320px** to **4K displays**.
+
+---
+
+# 🌟 Performance Features
+
+- Lazy Loaded Images
+- Smooth Animations
+- Optimized CSS
+- Modular JavaScript
+- Fast Navigation
+- Reusable Components
+
+---
+
+# 📸 Screenshots
+
+Add screenshots here
+
+- Home
+- About
+- Skills
+- Projects
+- Contact
+
+---
+
+# 🔮 Future Improvements
+
+- Blog Section
+- Admin Dashboard
+- CMS Integration
+- Multi-language Support
+- AI Chat Assistant
+- Visitor Analytics
+- Project Search
+- Backend Contact API
+
+---
+
+# 👨‍💻 About Me
+
+Hi, I'm **Abhay Singh**, a Computer Science (AI) student passionate about building modern web applications, solving Data Structures & Algorithms problems, and exploring Artificial Intelligence.
+
+I enjoy transforming ideas into responsive, scalable, and visually engaging digital products.
+
+---
+
+# 🤝 Connect With Me
 
 ### GitHub
+
 https://github.com/Abhay71044
 
-### LeetCode
-https://leetcode.com/u/Abhay_71044/
-
 ### LinkedIn
+
 https://www.linkedin.com/in/abhay-singh-894044292
 
-### Instagram
-https://www.instagram.com/abhaychauhan71044
+### LeetCode
 
----
+https://leetcode.com/u/Abhay_71044/
 
-## 📧 Contact
+### Email
 
-**Email:**  
 abhaysingh71044@gmail.com
 
-**Location:**  
-Greater Noida, Uttar Pradesh, India
+---
+
+# ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
+
+It motivates me to build more awesome projects.
 
 ---
 
-## 📜 Disclaimer
+<p align="center">
 
-All information, certifications, projects, achievements, and personal details displayed on this portfolio are authentic and accurate to the best of my knowledge.
+Made with ❤️ by Abhay Singh
 
----
-
-## ⭐ Support
-
-If you like this project, consider giving it a star ⭐ on GitHub.
-
----
+</p>
