@@ -5,7 +5,7 @@
 <img src="assets/profile.png" width="180" alt="Profile"/>
 
 </p>
-
+ 
 <p align="center">
 
 A modern, premium, fully responsive multi-page portfolio built using HTML5, CSS3 and JavaScript.
