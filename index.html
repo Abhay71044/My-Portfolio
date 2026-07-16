@@ -17,10 +17,44 @@
          PAGE LOADER
          ========================================== -->
     <div id="loader-wrapper">
-        <div class="loader-content">
-            <div class="loader-logo">AS</div>
-            <div class="loader-bar">
-                <div class="loader-bar-fill"></div>
+        <canvas id="loader-canvas"></canvas>
+        <div class="loader-container">
+            <!-- Center Circular Rings and Logo -->
+            <div class="loader-logo-area">
+                <div class="loader-ring ring-outer">
+                    <div class="ring-dot dot-1"></div>
+                </div>
+                <div class="loader-ring ring-middle">
+                    <div class="ring-dot dot-2"></div>
+                </div>
+                <div class="loader-ring ring-inner"></div>
+                <div class="loader-logo-text">
+                    <span class="logo-a">A</span><span class="logo-s">S</span>
+                </div>
+            </div>
+
+            <!-- Name and Title -->
+            <div class="loader-info">
+                <h1 class="loader-name"><span class="name-abhay">ABHAY</span> <span class="name-singh">SINGH</span></h1>
+                <p class="loader-subtitle">FULL STACK DEVELOPER</p>
+                <div class="loader-code-icon">&lt;/&gt;</div>
+            </div>
+
+            <!-- Loading Progress -->
+            <div class="loader-progress-container">
+                <div class="loader-progress-labels">
+                    <span class="loader-label-text">LOADING</span>
+                    <span class="loader-label-percent" id="loader-percent">0%</span>
+                </div>
+                <div class="loader-progress-bar">
+                    <div class="loader-progress-fill" id="loader-progress-fill"></div>
+                </div>
+                <p class="loader-tagline">BUILDING IDEAS. SOLVING PROBLEMS. CREATING IMPACT.</p>
+            </div>
+
+            <!-- Bottom Chevron/Triangle Decoration -->
+            <div class="loader-decor-bottom">
+                <div class="decor-triangle"></div>
             </div>
         </div>
     </div>

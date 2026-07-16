@@ -26,20 +26,199 @@ document.addEventListener("DOMContentLoaded", () => {
 function initLoader() {
     const loader = document.getElementById("loader-wrapper");
     if (!loader) return;
-    
+
+    const canvas = document.getElementById("loader-canvas");
+    const percentEl = document.getElementById("loader-percent");
+    const fillEl = document.getElementById("loader-progress-fill");
+
+    if (!canvas || !percentEl || !fillEl) return;
+
+    const ctx = canvas.getContext("2d");
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    window.addEventListener("resize", () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+    });
+
+    // Initialize particles and stars
+    const particles = [];
+    const particleCount = 35;
+    const stars = [];
+    const starCount = 50;
+
+    for (let i = 0; i < particleCount; i++) {
+        particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            size: Math.random() * 3 + 1,
+            speedX: (Math.random() - 0.5) * 0.4,
+            speedY: -Math.random() * 0.6 - 0.2,
+            color: Math.random() > 0.55 ? "rgba(0, 242, 254, " : "rgba(186, 85, 211, ",
+            alpha: Math.random(),
+            fadeDir: Math.random() > 0.5 ? 1 : -1,
+            fadeSpeed: Math.random() * 0.01 + 0.005
+        });
+    }
+
+    for (let i = 0; i < starCount; i++) {
+        stars.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            size: Math.random() * 1.2,
+            alpha: Math.random(),
+            twinkleSpeed: Math.random() * 0.015 + 0.005,
+            twinkleDir: Math.random() > 0.5 ? 1 : -1
+        });
+    }
+
+    // Wave grid rendering function
+    const drawWaveGrid = (side, time) => {
+        const cols = 6;
+        const rows = 25;
+        const colSpacing = 22;
+        const rowSpacing = height / rows;
+        
+        ctx.save();
+        for (let c = 0; c < cols; c++) {
+            const colAlpha = (1 - (c / cols)) * 0.15;
+            ctx.fillStyle = side === "left" ? `rgba(0, 242, 254, ${colAlpha})` : `rgba(186, 85, 211, ${colAlpha})`;
+            
+            for (let r = 0; r < rows; r++) {
+                const y = r * rowSpacing;
+                const wave1 = Math.sin((y / height) * Math.PI * 3 + time * 0.0012 + c * 0.35) * 12;
+                const wave2 = Math.cos((y / height) * Math.PI * 1.5 - time * 0.0018 + c * 0.6) * 6;
+                
+                let x;
+                if (side === "left") {
+                    x = c * colSpacing + 15 + wave1 + wave2;
+                } else {
+                    x = width - (c * colSpacing + 15) + wave1 + wave2;
+                }
+                
+                ctx.beginPath();
+                ctx.arc(x, y, 1, 0, Math.PI * 2);
+                ctx.fill();
+                
+                if (c > 0 && r % 2 === 0) {
+                    ctx.strokeStyle = side === "left" ? `rgba(0, 242, 254, ${colAlpha * 0.35})` : `rgba(186, 85, 211, ${colAlpha * 0.35})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.beginPath();
+                    const prevWave1 = Math.sin((y / height) * Math.PI * 3 + time * 0.0012 + (c - 1) * 0.35) * 12;
+                    const prevWave2 = Math.cos((y / height) * Math.PI * 1.5 - time * 0.0018 + (c - 1) * 0.6) * 6;
+                    const prevX = side === "left" ? (c - 1) * colSpacing + 15 + prevWave1 + prevWave2 : width - ((c - 1) * colSpacing + 15) + prevWave1 + prevWave2;
+                    ctx.moveTo(prevX, y);
+                    ctx.lineTo(x, y);
+                    ctx.stroke();
+                }
+            }
+        }
+        ctx.restore();
+    };
+
+    // Animation Loop
+    function animate(time) {
+        ctx.fillStyle = "#05070F";
+        ctx.fillRect(0, 0, width, height);
+
+        // Draw stars
+        ctx.save();
+        for (let i = 0; i < starCount; i++) {
+            const s = stars[i];
+            s.alpha += s.twinkleSpeed * s.twinkleDir;
+            if (s.alpha >= 1) {
+                s.alpha = 1;
+                s.twinkleDir = -1;
+            } else if (s.alpha <= 0.1) {
+                s.alpha = 0.1;
+                s.twinkleDir = 1;
+            }
+            ctx.fillStyle = `rgba(255, 255, 255, ${s.alpha})`;
+            ctx.fillRect(s.x, s.y, s.size, s.size);
+        }
+        ctx.restore();
+
+        // Draw wave grids on both sides
+        drawWaveGrid("left", time);
+        drawWaveGrid("right", time);
+
+        // Draw floating particles
+        ctx.save();
+        for (let i = 0; i < particleCount; i++) {
+            const p = particles[i];
+            p.y += p.speedY;
+            p.x += p.speedX;
+            
+            p.alpha += p.fadeSpeed * p.fadeDir;
+            if (p.alpha >= 0.7) {
+                p.alpha = 0.7;
+                p.fadeDir = -1;
+            } else if (p.alpha <= 0) {
+                p.alpha = 0;
+                p.fadeDir = 1;
+                p.y = height + 10;
+                p.x = Math.random() * width;
+            }
+
+            if (p.x < 0 || p.x > width) {
+                p.x = Math.random() * width;
+            }
+
+            ctx.fillStyle = `${p.color}${p.alpha})`;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        ctx.restore();
+
+        requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+
+    // Progress percentage updates
+    let progress = 0;
+    let isPageLoaded = false;
+
     window.addEventListener("load", () => {
-        setTimeout(() => {
-            loader.style.opacity = "0";
-            loader.style.visibility = "hidden";
-        }, 600);
+        isPageLoaded = true;
     });
 
     if (document.readyState === "complete") {
-        setTimeout(() => {
-            loader.style.opacity = "0";
-            loader.style.visibility = "hidden";
-        }, 600);
+        isPageLoaded = true;
     }
+
+    const updateProgress = () => {
+        if (progress < 80) {
+            progress += Math.random() * 2.5 + 0.5;
+        } else if (progress < 99) {
+            if (isPageLoaded) {
+                progress += Math.random() * 4 + 1;
+            } else {
+                progress += Math.random() * 0.3 + 0.05;
+            }
+        } else if (progress >= 99 && isPageLoaded) {
+            progress = 100;
+        }
+
+        if (progress > 100) progress = 100;
+
+        const roundedProgress = Math.floor(progress);
+        percentEl.textContent = `${roundedProgress}%`;
+        fillEl.style.width = `${roundedProgress}%`;
+
+        if (roundedProgress < 100) {
+            setTimeout(updateProgress, Math.random() * 30 + 15);
+        } else {
+            setTimeout(() => {
+                loader.style.opacity = "0";
+                loader.style.visibility = "hidden";
+                document.body.classList.add("portfolio-loaded");
+            }, 500);
+        }
+    };
+
+    setTimeout(updateProgress, 100);
 }
 
 // ==========================================
