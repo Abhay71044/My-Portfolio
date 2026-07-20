@@ -4,7 +4,7 @@
 
 <img src="assets/profile.png" width="180" alt="Profile"/>
 
-</p>
+</p> 
  
 <p align="center">
 
