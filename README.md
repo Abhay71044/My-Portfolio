@@ -2,7 +2,7 @@
 
 <p align="center">
  
-<img src="assets/profile.png" width="180" alt="Profile"/>
+<img src="assets/profile.png" width="180" alt="Profile"/> 
  
 </p> 
  
