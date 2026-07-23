@@ -104,7 +104,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 html {
     scroll-behavior: smooth;
     font-size: 16px;
-    height: 100%;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -112,10 +113,16 @@ body {
     color: var(--text-primary);
     font-family: var(--font-body);
     overflow-x: hidden;
+    width: 100%;
     transition: background-color var(--transition-speed), color var(--transition-speed);
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
+}
+
+body.menu-open {
+    overflow: hidden !important;
 }
 
 /* Scrollbar Design */
@@ -1289,9 +1296,9 @@ img {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
+    background: rgba(12, 12, 14, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -1300,18 +1307,27 @@ img {
     justify-content: center;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: background var(--transition-speed), border-color var(--transition-speed);
-    z-index: 5100;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background var(--transition-speed), border-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+    z-index: 5200;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 .lightbox-arrow:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+}
+.lightbox-arrow:active {
+    transform: translateY(-50%) scale(0.95);
 }
 .lightbox-arrow-left {
-    left: -80px;
+    left: -70px;
 }
 .lightbox-arrow-right {
-    right: -80px;
+    right: -70px;
 }
 
 /* ==========================================
@@ -2194,6 +2210,8 @@ body.portfolio-loaded .navbar {
         width: 100%;
         max-width: 400px;
         height: 100vh;
+        height: 100dvh;
+        max-height: 100vh;
         background: rgba(5, 8, 22, 0.94);
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
@@ -2205,8 +2223,11 @@ body.portfolio-loaded .navbar {
         gap: 0;
         z-index: 1900;
         transition: right 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-        padding: 40px 30px !important;
+        padding: 30px 20px 40px 20px !important;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
+        overscroll-behavior-y: contain;
         box-shadow: -10px 0 35px rgba(0, 0, 0, 0.6);
     }
     .nav-links.open {
@@ -2502,8 +2523,19 @@ body.portfolio-loaded .navbar {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    .lightbox-arrow-left { left: 10px; }
-    .lightbox-arrow-right { right: 10px; }
+    .lightbox-arrow {
+        position: fixed;
+        top: 50%;
+        width: 46px;
+        height: 46px;
+        font-size: 1.3rem;
+        background: rgba(12, 12, 14, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(16, 185, 129, 0.2);
+        z-index: 5200;
+    }
+    .lightbox-arrow-left { left: 12px !important; right: auto !important; }
+    .lightbox-arrow-right { right: 12px !important; left: auto !important; }
     
     /* Pathways & Vision Grids Responsive Overrides */
     .home-pathways-grid {

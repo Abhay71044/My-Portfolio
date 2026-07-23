@@ -393,9 +393,8 @@ function initNavbar() {
         navToggle.addEventListener("click", () => {
             const isOpen = navToggle.classList.toggle("open");
             navLinksList.classList.toggle("open");
-            if (isOpen) {
-                document.body.style.overflow = "hidden";
-            } else {
+            document.body.classList.toggle("menu-open", isOpen);
+            if (!isOpen) {
                 document.body.style.overflow = "";
             }
         });
@@ -405,6 +404,7 @@ function initNavbar() {
             link.addEventListener("click", () => {
                 navToggle.classList.remove("open");
                 navLinksList.classList.remove("open");
+                document.body.classList.remove("menu-open");
                 document.body.style.overflow = "";
             });
         });
@@ -415,6 +415,7 @@ function initNavbar() {
         if (window.innerWidth > 1024) {
             if (navToggle) navToggle.classList.remove("open");
             if (navLinksList) navLinksList.classList.remove("open");
+            document.body.classList.remove("menu-open");
             document.body.style.overflow = "";
         }
     });
@@ -423,6 +424,7 @@ function initNavbar() {
         if (e.key === "Escape") {
             if (navToggle) navToggle.classList.remove("open");
             if (navLinksList) navLinksList.classList.remove("open");
+            document.body.classList.remove("menu-open");
             document.body.style.overflow = "";
         }
     });
@@ -669,6 +671,30 @@ function initCertLightbox() {
             closeLightbox();
         }
     });
+
+    // Touch Swipe Navigation for Mobile Devices
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    modal.addEventListener("touchstart", (e) => {
+        if (e.touches && e.touches.length > 0) {
+            touchStartX = e.touches[0].clientX;
+        }
+    }, { passive: true });
+
+    modal.addEventListener("touchend", (e) => {
+        if (e.changedTouches && e.changedTouches.length > 0) {
+            touchEndX = e.changedTouches[0].clientX;
+            const diffX = touchEndX - touchStartX;
+            if (Math.abs(diffX) > 40) {
+                if (diffX < 0) {
+                    nextImage(); // Swipe left -> Next image
+                } else {
+                    prevImage(); // Swipe right -> Previous image
+                }
+            }
+        }
+    }, { passive: true });
 
     document.addEventListener("keydown", (e) => {
         if (!modal.classList.contains("active")) return;
