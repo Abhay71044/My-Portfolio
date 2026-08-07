@@ -164,5 +164,5 @@ Hi! I'm **Abhay Singh**, a Computer Science & Engineering (AI) student at **GL B
 ---
 
 <p align="center">
-  Made with ❤️ by <b>Abhay Singh</b>
+  Made by <b>Abhay Singh</b>
 </p>
