@@ -19,8 +19,7 @@ Inspired by Apple, Vercel, Linear, Stripe and Framer design systems.
 ## 🌐 Live Demo
 
 ```
-https://abhaysingh-portfolio.vercel.app/
-
+https://my-portfolio-odsc.onrender.com
 ```
 
 ---
