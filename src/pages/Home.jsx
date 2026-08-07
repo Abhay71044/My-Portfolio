@@ -235,7 +235,7 @@ const Home = () => {
           <StatCard target="10" label="Projects Built" />
           <StatCard target="7" label="Certifications Earned" />
           <StatCard target="2" label="Internships Completed" />
-          <StatCard target="250" label="DSA Problems Solved" />
+          <StatCard target="350" label="DSA Problems Solved" />
         </div>
       </section>
 

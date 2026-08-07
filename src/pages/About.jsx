@@ -271,7 +271,7 @@ const About = () => {
               </div>
               <div className="q-ach-card glass-card">
                 <i className="fas fa-code-branch" style={{ color: '#f43f5e' }}></i>
-                <span>250+ DSA Problems</span>
+                <span>350+ DSA Problems</span>
               </div>
             </div>
           </div>
