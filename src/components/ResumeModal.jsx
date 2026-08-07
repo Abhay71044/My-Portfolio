@@ -19,7 +19,7 @@ const ResumeModal = ({ isOpen, resumeUrl, onClose }) => {
 
   if (!isOpen) return null;
 
-  const url = resumeUrl || '/assets/resume/Abhay_Singh_Resume.jpeg';
+  const url = resumeUrl || '/assets/resume/Abhay_Singh_Resume.png';
 
   return (
     <div
@@ -59,7 +59,7 @@ const ResumeModal = ({ isOpen, resumeUrl, onClose }) => {
           <a
             href={url}
             id="resume-download-btn"
-            download="Abhay_Singh_Resume.jpeg"
+            download="Abhay_Singh_Resume.png"
             className="btn-primary"
             style={{
               display: 'inline-flex',

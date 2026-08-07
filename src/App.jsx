@@ -65,7 +65,7 @@ function App() {
   const handleOpenResume = (url) => {
     setResumeState({
       isOpen: true,
-      url: url || '/assets/resume/Abhay_Singh_Resume.jpeg',
+      url: url || '/assets/resume/Abhay_Singh_Resume.png',
     });
   };
 

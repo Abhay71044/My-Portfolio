@@ -132,7 +132,7 @@ const Navbar = ({ onOpenResume }) => {
           <button
             onClick={(e) => {
               e.preventDefault();
-              if (onOpenResume) onOpenResume('/assets/resume/Abhay_Singh_Resume.jpeg');
+              if (onOpenResume) onOpenResume('/assets/resume/Abhay_Singh_Resume.png');
             }}
             className="btn-nav-resume-mobile"
             style={{ display: isMobileOpen ? 'inline-flex' : 'none' }}
@@ -172,7 +172,7 @@ const Navbar = ({ onOpenResume }) => {
         <button
           onClick={(e) => {
             e.preventDefault();
-            if (onOpenResume) onOpenResume('/assets/resume/Abhay_Singh_Resume.jpeg');
+            if (onOpenResume) onOpenResume('/assets/resume/Abhay_Singh_Resume.png');
           }}
           className="btn-nav-resume"
         >
