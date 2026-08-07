@@ -323,7 +323,7 @@ const About = () => {
               <div className="journey-badge">💻 2026 (Present)</div>
               <h4>Building Full Stack</h4>
               <p>Currently engineering full stack software, practicing algorithms, and researching machine learning.</p>
-              <div className="journey-stat">250+ DSA Solved</div>
+              <div className="journey-stat">350+ DSA Solved</div>
             </div>
             <div className="journey-connector"><i className="fas fa-arrow-right"></i></div>
 
