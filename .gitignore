@@ -1,1 +1,17 @@
+# Dependencies
 node_modules
+.pnpm-store
+
+# Production build output
+dist
+build
+
+# Environment files & OS files
+.DS_Store
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
