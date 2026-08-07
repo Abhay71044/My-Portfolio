@@ -1,321 +1,168 @@
-# 🚀 Abhay Singh - Premium Portfolio Website  
+# 🚀 Abhay Singh - Premium React Portfolio Website
 
 <p align="center">
- 
-<img src="assets/profile.png" width="180" alt="Profile"/> 
- 
-</p> 
-  
+  <img src="assets/profile.png" width="180" alt="Abhay Singh Profile" style="border-radius: 50%;"/>
+</p>
+
 <p align="center">
+  <b>A modern, high-performance, component-driven portfolio web application.</b><br/>
+  Engineered with React 18, Vite, Tailwind CSS, Framer Motion, and Three.js.
+</p>
 
-A modern, premium, fully responsive multi-page portfolio built using HTML5, CSS3 and JavaScript.
-
-Inspired by Apple, Vercel, Linear, Stripe and Framer design systems.
-
-</p> 
- 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Demo & Links
+
+- **Live Website**: [https://my-portfolio-odsc.onrender.com](https://my-portfolio-odsc.onrender.com)
+- **GitHub Repository**: [https://github.com/Abhay71044/My-Portfolio](https://github.com/Abhay71044/My-Portfolio)
+
+---
+
+## ✨ Features
+
+- ⚡ **React 18 + Vite 5**: Built for lightning-fast HMR and optimized production bundle output.
+- 🎨 **Glassmorphism & Ambient Design**: Dark mode design system featuring smooth gradient glow backgrounds and custom ambient lighting.
+- 💡 **Interactive Spotlight & Custom Cursor**: Dynamic cursor follower and mouse-tracking spotlight effects.
+- 📜 **Scroll Reveal & Micro-Animations**: Smooth scroll reveal transitions and Framer Motion animated UI elements.
+- 📊 **Animated Stat Counter**: Highlights key achievements (350+ DSA Problems Solved, 10+ Projects Built, 7+ Certifications, 2+ Internships).
+- 💼 **Detailed Project Case Studies**: Dedicated single-project routes (`/projects/:projectId`) with architecture breakdowns, tech stack tags, and live links.
+- 🖼️ **Interactive Certificate Lightbox**: Custom modal overlay with carousel navigation for credential verification.
+- 📄 **Embedded Resume Viewer**: Built-in interactive PDF/image viewer modal for easy resume preview and direct downloads.
+- 📱 **100% Responsive Layout**: Mobile-first responsive design supporting displays from 320px up to 4K resolutions.
+
+---
+
+## 📂 Project Structure
 
 ```
-https://my-portfolio-odsc.onrender.com
-```
-
----
-
-# ✨ Features
-
-- 🎨 Premium Glassmorphism UI
-- 🌙 Dark / Light Theme
-- 📱 Fully Responsive Design
-- ⚡ Smooth Animations
-- 🖱️ Custom Cursor
-- 💡 Interactive Spotlight Effect
-- 📜 Scroll Reveal Animations
-- 📊 Animated Statistics
-- 🏆 Dedicated Achievement Section
-- 💻 Project Showcase
-- 📄 Resume Download
-- 📬 Contact Form
-- 🖼️ Certificate Gallery
-- 🚀 Optimized Performance
-- ♿ Accessibility Friendly
-
----
-
-# 📂 Website Pages
-
-## 🏠 Home
-
-- Hero Section
-- Animated Typing Effect
-- Statistics
-- Featured Skills
-- Social Links
-- Call To Action
-
----
-
-## 👨‍💻 About
-
-- Personal Journey
-- Academic Background
-- Army Public School
-- GL Bajaj Institute of Technology & Management
-- CGPA
-- Core Strengths
-- Vision
-- Mission
-
----
-
-## 💻 Skills
-
-- Programming Languages
-- Frontend Development
-- Backend Development
-- Databases
-- Artificial Intelligence
-- Cloud Computing
-- Tools & Technologies
-
----
-
-## 💼 Experience
-
-- SkillCraft Technology Internship
-- ShadowFox Internship
-- Professional Timeline
-- Responsibilities
-- Technologies Used
-
----
-
-## 🚀 Projects
-
-Featured Projects
-
-- Food Delivery Website
-- InclusivePay
-- Smart India Hackathon Project
-- Stopwatch Application
-- Tic Tac Toe
-- To-Do List
-- Farming Dashboard
-- More...
-
-Each project includes
-
-- Description
-- Technologies
-- GitHub Link
-- Live Demo
-- Case Study
-
----
-
-## 🏆 Achievements
-
-- Internship Achievements
-- Hackathons
-- Academic Milestones
-- Coding Achievements
-- Statistics
-
----
-
-## 📜 Certifications
-
-- Internship Certificates
-- Recommendation Letter
-- Cybersecurity
-- Workshops
-- Technical Certifications
-
-Interactive Image Preview Included.
-
----
-
-## 📬 Contact
-
-- Contact Form
-- Email
-- LinkedIn
-- GitHub
-- LeetCode
-- Location
-- Resume Download
-
----
-
-# 🛠 Tech Stack
-
-### Frontend
-
-- HTML5
-- CSS3
-- JavaScript (ES6)
-
-### UI Design
-
-- Glassmorphism
-- Responsive Design
-- CSS Grid
-- Flexbox
-- CSS Variables
-
-### Icons
-
-- Font Awesome
-
-### Fonts
-
-- Plus Jakarta Sans
-- Inter
-
----
-
-# 📁 Folder Structure
-
-```
-Portfolio
-│
-├── assets
-│   ├── profile.png
-│   ├── certificates
-│   ├── projects
-│   ├── resume
-│   └── images
-│
-├── index.html
-├── about.html
-├── skills.html
-├── experience.html
-├── projects.html
-├── achievements.html
-├── certifications.html
-├── contact.html
-│
-├── style.css
-├── script.js
-│
+My-Portfolio/
+├── assets/                  # Public image assets, project screenshots, certificates & resume
+│   ├── certificates/
+│   ├── projects/
+│   ├── resume/
+│   └── profile.png
+├── public/                  # Favicon & static assets
+├── src/
+│   ├── components/          # Modular React Components
+│   │   ├── CustomCursor.jsx # Interactive cursor tracker
+│   │   ├── Spotlight.jsx    # Mouse tracking spotlight glow
+│   │   ├── Navbar.jsx       # Header navigation bar with resume trigger
+│   │   ├── Footer.jsx       # Footer component with quick links & socials
+│   │   ├── LightboxModal.jsx# Certificate modal viewer
+│   │   ├── ResumeModal.jsx  # Interactive resume modal viewer
+│   │   ├── StatCard.jsx     # Animated counter card component
+│   │   ├── ProjectCard.jsx  # Feature project card component
+│   │   ├── CertCard.jsx     # Certificate card component
+│   │   ├── Loader.jsx       # Initial page loader
+│   │   └── ScrollToTop.jsx  # Automatic route scroll reset
+│   ├── hooks/               # Custom React Hooks
+│   │   └── useScrollReveal.js
+│   ├── pages/               # Application Routes / Views
+│   │   ├── Home.jsx         # Hero, Stats, Featured Work & Quick Contact
+│   │   ├── About.jsx        # Journey, Education, Mission & Strengths
+│   │   ├── Skills.jsx       # Categorized Tech Stack Grid
+│   │   ├── Experience.jsx   # Internships & Professional Timeline
+│   │   ├── Projects.jsx     # Full Project Portfolio Grid
+│   │   ├── ProjectDetail.jsx# Individual Project Case Study page
+│   │   ├── Achievements.jsx # Hackathons, Milestones & Awards
+│   │   ├── Certifications.jsx # Interactive Credential Gallery
+│   │   └── Contact.jsx      # Contact Form & Direct Links
+│   ├── App.jsx              # Main App Component, Router & Global Modals
+│   ├── index.css            # Tailwind & Custom CSS Design System
+│   └── main.jsx             # React Application Entrypoint
+├── index.html               # Main HTML template
+├── package.json             # NPM dependencies and scripts
+├── tailwind.config.js       # Tailwind CSS configuration
+├── postcss.config.js        # PostCSS configuration
+├── vite.config.js           # Vite bundler configuration
 └── README.md
 ```
 
 ---
 
-# 🚀 Getting Started
+## 🛠️ Tech Stack
 
-Clone the repository
+### Frontend & Core
+- **React 18**: UI Library for building modular components.
+- **Vite 5**: Next-generation frontend tooling and bundler.
+- **React Router DOM v6**: Client-side routing with parameter support.
 
+### Styling & Graphics
+- **Tailwind CSS v3**: Utility-first CSS framework.
+- **PostCSS & Autoprefixer**: CSS transformation and browser prefixing.
+- **Three.js & React Three Fiber**: 3D graphics and canvas rendering.
+- **Framer Motion**: Production-ready animation library for React.
+
+### Icons & Typography
+- **Lucide React**: Modern iconography library.
+- **Font Awesome**: Brand and interface icons.
+- **Google Fonts**: Plus Jakarta Sans, Outfit, and Inter typography.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) (v18.0 or higher) and `npm` installed.
+
+### 1. Clone the repository
 ```bash
-git clone https://github.com/Abhay71044/portfolio-website.git
+git clone https://github.com/Abhay71044/My-Portfolio.git
 ```
 
-Go to the project
-
+### 2. Navigate to project directory
 ```bash
-cd portfolio-website
+cd My-Portfolio
 ```
 
-Open
-
+### 3. Install dependencies
+```bash
+npm install
 ```
-index.html
+
+### 4. Run Development Server
+```bash
+npm run dev
 ```
+Open your browser at `http://localhost:5173`.
 
-or use VS Code Live Server.
-
----
-
-# 📱 Responsive
-
-Designed for
-
-- Desktop
-- Laptop
-- Tablet
-- Mobile
-
-Supports screen sizes from **320px** to **4K displays**.
+### 5. Build for Production
+```bash
+npm run build
+```
+The optimized production build output will be generated in the `dist/` directory.
 
 ---
 
-# 🌟 Performance Features
+## ☁️ Deployment
 
-- Lazy Loaded Images
-- Smooth Animations
-- Optimized CSS
-- Modular JavaScript
-- Fast Navigation
-- Reusable Components
+This project is deployed on **Render**:
+- **Build Command**: `npm run build`
+- **Publish Directory**: `dist`
 
 ---
 
-# 📸 Screenshots
+## 👨‍💻 About Me
 
-Add screenshots here
+Hi! I'm **Abhay Singh**, a Computer Science & Engineering (AI) student at **GL Bajaj Institute of Technology & Management**. I specialize in full-stack web development, Data Structures & Algorithms, and machine learning research.
 
-- Home
-- About
-- Skills
-- Projects
-- Contact
-
----
-
-# 🔮 Future Improvements
-
-- Blog Section
-- Admin Dashboard
-- CMS Integration
-- Multi-language Support
-- AI Chat Assistant
-- Visitor Analytics
-- Project Search
-- Backend Contact API
+- 🧠 **350+** DSA Problems Solved across platforms
+- 💻 **10+** Full-Stack & Web Projects Built
+- 📜 **7+** Professional Technical Certifications
+- 💼 **2+** Web Development & Software Engineering Internships
 
 ---
 
-# 👨‍💻 About Me
+## 🤝 Connect With Me
 
-Hi, I'm **Abhay Singh**, a Computer Science (AI) student passionate about building modern web applications, solving Data Structures & Algorithms problems, and exploring Artificial Intelligence.
-
-I enjoy transforming ideas into responsive, scalable, and visually engaging digital products.
-
----
-
-# 🤝 Connect With Me
-
-### GitHub
-
-https://github.com/Abhay71044
-
-### LinkedIn
-
-https://www.linkedin.com/in/abhay-singh-894044292
-
-### LeetCode
-
-https://leetcode.com/u/Abhay_71044/
-
-### Email
-
-abhaysingh71044@gmail.com
-
----
-
-# ⭐ Support
-
-If you like this project, consider giving it a ⭐ on GitHub.
-
-It motivates me to build more awesome projects.
+- **Portfolio**: [my-portfolio-odsc.onrender.com](https://my-portfolio-odsc.onrender.com)
+- **GitHub**: [github.com/Abhay71044](https://github.com/Abhay71044)
+- **LinkedIn**: [linkedin.com/in/abhay-singh-894044292](https://www.linkedin.com/in/abhay-singh-894044292)
+- **LeetCode**: [leetcode.com/u/Abhay_71044/](https://leetcode.com/u/Abhay_71044/)
+- **Email**: [abhaysingh71044@gmail.com](mailto:abhaysingh71044@gmail.com)
 
 ---
 
 <p align="center">
-
-Made with ❤️ by Abhay Singh
-
+  Made with ❤️ by <b>Abhay Singh</b>
 </p>
