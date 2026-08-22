@@ -14,7 +14,6 @@
 ## 🌐 Live Demo & Links
 
 - **Live Website**: [https://my-portfolio-odsc.onrender.com](https://my-portfolio-odsc.onrender.com)
-- **GitHub Repository**: [https://github.com/Abhay71044/My-Portfolio](https://github.com/Abhay71044/My-Portfolio)
 
 ---
 
